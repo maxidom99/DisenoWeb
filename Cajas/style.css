@@ -1,0 +1,73 @@
+.title {
+    color: rgb(3, 255, 230);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+    background-image: linear-gradient(to right, #42bed6, #ba0dca);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: color 0.5s ease-in-out, font-size 0.2s ease-in-out;
+  }
+  
+  .title:hover {
+    color: linear-gradient(to right, #de84f7, #f69d3c);
+    transition: color 0.5s ease-in-out, font-size 0.2s ease-in-out;
+    font-size: 1.5em;
+  }
+  
+html{
+height: 100%;
+}
+
+  .fondo{
+  background-image: linear-gradient(to bottom right, #D4BFFF, #006B8F);
+  height: 100%;
+  }
+
+  .h2 {
+    color: rgb(164, 69, 164);
+    text-align: center;
+    background: linear-gradient(to right, #fbfbfb, #563920);
+    background-size: 200% 100%;
+    transition: background-position 0.5s ease;
+  }
+  
+  .h2:hover {
+    background-position: right;
+    color: #ff9800;
+  }
+  
+.caja{
+width: 100%;
+}
+ 
+/*.parrafo {
+    font-size: 1.1rem;
+    background-color: rgb(50, 86, 128);
+    color: #d1ff03;
+    text-align: center; 
+    font-family: Arial, sans-serif;
+    transition: font-size 0.2s ease-in-out;
+  }
+
+  .parrafo:hover {
+    font-size: 1.2rem;
+    font-family: "Open Sans", sans-serif;
+    transform: scale(1.1);
+  }
+  */
+
+  .parrafo {
+    display: inline-block;
+    background-color: white;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 5px;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .parrafo:hover {
+    transform: rotate(360deg);
+  }
+  

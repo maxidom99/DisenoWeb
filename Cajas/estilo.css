@@ -1,0 +1,51 @@
+p{
+    background-color: rgba(254, 254, 254, 0.499);
+    border-radius: 1rem;
+    text-shadow: rgb(27, 154, 161);
+    border-width: 2px;
+    border-color: rgb(201, 129, 129);
+    border-style: groove;
+   padding: 1.0rem;
+}
+
+body{
+    background: linear-gradient(to bottom, #15a879, #121298);
+}
+
+h2{
+    text-decoration: none;
+    color: aqua;
+    text-align: center;
+}
+h2:hover{
+    background-color: #73d1cb;
+    color: rgb(176, 0, 224);
+    
+}
+
+.tit{
+    font-size: 50px;
+    font-weight: bold;
+    font-style: italic;
+    font-variant: small-caps;
+    font-family: monospace;
+    text-transform: capitalize;
+    background-color: #121531;
+    letter-spacing: 4px;
+    color: aqua;
+    text-align:center;
+    word-spacing: 8px;
+    animation: color-change 4s infinite;
+}
+
+@keyframes color-change {
+  0% {
+    color: aqua;
+  }
+  50% {
+    color: #f200ff;
+  }
+  100% {
+    color: aqua;
+  }
+}

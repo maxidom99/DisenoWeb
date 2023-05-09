@@ -1,0 +1,78 @@
+button{
+    
+    background-color: #006363;
+        border-radius: 8px;
+        border-color: #73d1cb;
+        text-align: center;
+        font-size: large;
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        height: 5vh;
+        margin: 5px;
+        padding: 5px 10px;
+        transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
+
+    }
+
+    a{
+        text-decoration: none;
+        color: aqua;
+    }
+    a:hover{
+        background-color: #73d1cb;
+        color: rgb(176, 0, 224);
+        
+    }
+    
+    button:hover{
+        background-color: #73d1cb;
+        color: rgb(176, 0, 224);
+        box-shadow: 0 12px 16px 0 rgb(0, 0, 0), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transform: translate3d(12px, 50%, 3em);
+        -webkit-transform: translate3d(12px, 50%, 3em);
+        -moz-transform: translate3d(12px, 50%, 3em);
+    box-shadow: 0 8px 8px 0 #000000,0 8px 8px 0 #000000;
+}
+              
+    body {
+        background-image: url("/fondo1.jpg");
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+      }
+
+    .h1{
+            font-size: 50px;
+            font-weight: bold;
+            font-style: italic;
+            font-variant: small-caps;
+            font-family: monospace;
+            text-transform: capitalize;
+            background-color: #121531;
+            letter-spacing: 4px;
+            color: aqua;
+            text-align:center;
+            word-spacing: 8px;
+            animation: color-change 4s infinite;
+        }
+        
+        @keyframes color-change {
+          0% {
+            color: aqua;
+          }
+          50% {
+            color: #f200ff;
+          }
+          100% {
+            color: aqua;
+          }
+        }
+
+        .contenedor{
+          width: 50%;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+        }

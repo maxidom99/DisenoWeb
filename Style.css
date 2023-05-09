@@ -41,6 +41,7 @@ button{
         background-image: url("/fondo1.jpg");
         background-size: 100% auto;
         background-repeat: no-repeat;
+        background-size: cover;
       }
 
     .h1{

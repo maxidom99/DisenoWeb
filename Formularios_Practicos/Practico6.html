@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Form 6</title>
+<head>
+    <section>
+        <button><a href="inicio_forms.html">Volver al Dashboard</a></button>
+        <form class="hijosForm" action="datos.php" method="post">
+            <fieldset>
+    <legend> Campos de varios tipos</legend>
+            <label for="inombre">Ingresa nombre</label>*
+            <input type="text" id="inombre" name="name" required>
+            <br>
+            <label for="numero">Ingrese numero</label>
+            <input type="number" name="numero" max="100">
+            <label for="contrasenia" name="contrasenia" id="contrasenia">Ingrese contraseña</label>
+            <input type="password" required>*
+            <input type="range">
+            <input type="search">
+            <input type="tel">
+            <input type="time">
+            <input type="week">
+    
+        </fieldset>
+    
+            
+                </form>
+    
+               <br>
+    
+                <form action="datos.php" method="post" enctype="multipart/form-data" >
+    <fieldset>
+        <legend>Datos personales</legend>
+                    <label for="inombre">Ingresa nombre</label>
+                    <input type="text" id="inombre" name="name" />
+                    <br>
+                    <label for="iapel">Ingresa apellido</label>
+                    <input type="text" id="iapel" name="apellido" >
+                    <br>
+                </fieldset>
+                <br>
+    
+                    <label for="numero">Ingrese numero</label>              
+                    <input type="number" id="numero" value="18"/>
+                    <br>
+                    <h3>radio</h3>
+                    <label for="sexo">Indique el sexo</label>
+                    <input type="radio" name="sexo"value="hombre"/>
+                    <input type="radio" name="sexo"value="mujer"/>
+                   
+                    <br>
+                    <h3>Checkbox</h3>              
+    Selecciona tus intereses:
+    <br />
+    <input name="cbipeliculas" type="checkbox" checked />Películas
+    <br />
+    <input name="cbilibros" type="checkbox" />Libros
+    <br />
+    <input name="cbrevistas" type="checkbox" />Revistas
+    
+    <br />
+                    <input type="text"placeholder="Comience con Mayúscula">Placeholder
+                    <br>
+                    <input type ="text" name="control" autofocus="autofocus">Autofocus
+                    <br>
+                    <input type="text" name="nombre" pattern="[Aa-Zz]{4-16}">Patern
+                    <br>
+                    
+    
+    <select name="nombre"> 
+    <option> Opcion 1 </option> 
+    <option> Opcion 2 </option> 
+    </select>
+    <br>
+    <br>
+    
+    <label>Indique una ciudad:
+        <input list="city" name="mycity" /></label>
+        <datalist id="city">
+          <option value="Montevideo">
+          <option value="Canelones">
+          <option value="Soriano">
+          <option value="Maldonado">
+          <option value="San José">
+          <option value="Colonia">
+        </datalist>
+        <br>
+           <br>
+           
+        <br>
+        <br>
+    <input type="button" value="Botón"> <input type="submit"  /> <br><input type="reset"value="Reset" />
+    Restablecer todos los campos a su valor predeterminado value="Enviar este formulario"
+    
+    
+    
+    <input type="email">
+    
+    <label for="adjunto" name="archivo" id="adjunto"></label>
+    <input type="file">
+    <input type="month">
+    
+    
+    </section>
+</head>    
+</body>
+</html>

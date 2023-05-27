@@ -33,7 +33,7 @@ main {
 	margin: 5px;
 }
 
-button{
+.button{
     background-color: #006363;
         border-radius: 8px;
         border-color: #73d1cb;
@@ -62,17 +62,17 @@ button{
           color: aqua;
         }
       }
-    a{
+    .a{
         text-decoration: none;
         color: aqua;
     }
-    a:hover{
+    .a:hover{
         background-color: #73d1cb;
         color: rgb(176, 0, 224);
         
     }
     
-    button:hover{
+    .button:hover{
         background-color: #73d1cb;
         color: rgb(176, 0, 224);
         box-shadow: 0 12px 16px 0 rgb(0, 0, 0), 0 17px 50px 0 rgba(0,0,0,0.19);

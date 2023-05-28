@@ -11,6 +11,9 @@ class FormularioViaje {
     private $fechaIda;
     private $fechaVuelta;
     private $tipoServicio;
+    private $hospedajes;
+    private $viajerosMayores;
+    private $viajerosMenores;
 
     function guardarDatos() {
         // Generar un nombre único para el archivo JSON
@@ -27,7 +30,10 @@ class FormularioViaje {
             'ciudad' => $this->ciudadSeleccionada,
             'fechaIda' => $this->fechaIda,
             'fechaVuelta' => $this->fechaVuelta,
-            'tipoServicio' => $this->tipoServicio
+            'tipoServicio' => $this->tipoServicio,
+            'hospedajes' => $this->hospedajes,
+            'viajerosMayores' => $this->viajerosMayores,
+            'viajerosMenores' => $this->viajerosMenores
         );
 
         $jsonData = json_encode($data);
@@ -142,6 +148,42 @@ class FormularioViaje {
         // Devolver el valor del atributo "tipoServicio" del objeto
         return $this->tipoServicio;
     }
+
+    function setHospedajes($hospedajes) {
+        // Asignar el valor de los hospedajes al atributo "hospedajes" del objeto
+        $this->hospedajes = $hospedajes;
+    }
+
+    function getHospedajes() {
+        // Devolver el valor del atributo "hospedajes" del objeto
+        return $this->hospedajes;
+    }
+
+    function setViajerosMayores($viajerosMayores) {
+        $this->viajerosMayores = $viajerosMayores;
+    }
+
+    function getViajerosMayores() {
+        return $this->viajerosMayores;
+    }
+
+    function setViajerosMenores($viajerosMenores) {
+        $this->viajerosMenores = $viajerosMenores;
+    }
+
+    function getViajerosMenores() {
+        return $this->viajerosMenores;
+    }
+
+    function validarContrasenas() {
+        // Validar que las contraseñas sean iguales
+        if ($this->pass !== $this->passcheck) {
+            echo "Las contraseñas no coinciden";
+            return false;
+        }
+
+        return true;
+    }
 }
 
 $formulario = new FormularioViaje();
@@ -171,5 +213,9 @@ if (isset($_POST['Habitacion'])) {
     $hospedajes[] = 'Habitacion';
 }
 
-$formulario->guardarDatos();
+$formulario->setHospedajes($hospedajes);
+
+if ($formulario->validarContrasenas()) {
+    $formulario->guardarDatos();
+}
 ?>

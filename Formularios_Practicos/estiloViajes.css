@@ -13,31 +13,60 @@ input[type="number"] {
 
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    background:linear-gradient(#1f08a0b1, #098175);
-    margin: 0;
-    padding: 20px;
+    font-family: righteous;
+    background-image: url('https://drscdn.500px.org/photo/38442138/m%3D900/v2?sig=0693e32cc0e7fd956e7977b221b3d12bb5a28bcae465abae5f2be5d44a2b0afd');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   
   form {
     max-width: 600px;
     margin: 0 auto;
-    background-color: #fff;
+    background: linear-gradient(#29c0b1c4,#ccc);
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1.0);
+    opacity: 0.8;
   }
   
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
   
   fieldset {
     margin-bottom: 20px;
-    border: none;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+
+  fieldset:hover{
+   color: rgb(168, 168, 168);
+   background: #000000;
+   transform: scale(1.1,1.2);
+  }
+
+  legend{
+    text-align: center;
+    text-decoration: solid;
+  }
+
+  .cont{
+    display: flex;
+    flex-wrap: wrap;
   }
   
+  .col1{
+    flex-basis: 50%;
+    box-sizing: border-box;
+  }
+
+  .col2{
+    flex-basis: 50%;
+    box-sizing: border-box;
+  }
+  
+  .inf{
+    margin-bottom: 10px;
+    width: 100%;
+  }
   legend {
     font-weight: bold;
     margin-bottom: 10px;
@@ -76,7 +105,6 @@ body {
   }
 
   header {
-    background-color: #0c47b4d4;
     padding: 20px;
     text-align: center;
     font-family: Righteous;
@@ -91,21 +119,22 @@ body {
     20% { color: orange; }
     40% { color: yellow; }
     60% { color: green; }
-    80% { color: blue; }
+    80% { color: rgb(0, 255, 255); }
     100% { color: purple; }
   }
   
   header h1 {
-    animation: colorChange 5s linear infinite;
+    animation: colorChange 10s linear infinite;
+    transition: 0,3s;
   }
 
   .sub{
     align-items: center;
     border-radius: 5px;
     background: #098175;
-    width: 30%;
+    width: 900%;
     height: 2rem;
-   
+    transition: transform 0.3s ease-in-out;
   }
   .flex{
     display: flex;
@@ -113,5 +142,8 @@ body {
     gap: 10px;
   }
   .sub:hover{
-    
+    transform: scale3d(1.2, 1.2, 1.2);
+    color: rgb(1, 38, 223);
+    background-color: rgba(0, 255, 255, 0.479);
+    box-shadow: 20px;
   }

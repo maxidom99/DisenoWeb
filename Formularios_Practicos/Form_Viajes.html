@@ -7,18 +7,22 @@
     <link rel="stylesheet" href="estiloViajes.css">
     <title>Formulario de Viajes</title>
 </head>
+
 <body>
-    <button><a href="../index.html">Volver al Dashboard</a></button>
-    <header>
-        <h1>ViajaYa</h1>
-    </header>
-    <form action="viaje.php" method="post" oninput="viajeros.value = parseInt(mayores.value) + parseInt(menores.value)">
     
+    <header>
+        <button><a href="../index.html">Volver al Dashboard</a></button>
+        <h1 class="color-transition">ViajaYa</h1>
+    </header>
+    <form action="viaje.php" method="POST" oninput="viajeros.value = parseInt(mayores.value) + parseInt(menores.value)">
+
+    <div class="cont">
+        <div class="col1">
         <fieldset>
         <legend>Datos personales</legend>
 
     <label for="nombre">Ingrese su nombre: </label>
-    <input type="text" id="nombre" name="name" required>
+    <input type="text" id="nombre" name="nombre" required>
     <br>
     <label for="apellido">Ingrese su apellido: </label>
     <input type="text" id="apellido" name="apellido" required>
@@ -41,11 +45,13 @@
 <label for="passcheck">Confirme su contraseña: </label>
 <input type="password" id="passcheck" name="passcheck" required>
 </fieldset>
+</div>
 
+<div class="col2">
 <fieldset>
     <legend>Datos del viaje</legend>
     <label>Indique una ciudad:
-        <input list="city" name="mycity" /></label>
+        <input list="city" name="city"/></label>
         <datalist id="city" readonly>
           <option value="Madrid, España">
           <option value="Barcelona, España">
@@ -57,9 +63,9 @@
         <br>
 
         <label for="fechaida">Fecha de ida: </label>
-        <input type="date">
+        <input type="date" id="fechaida" min="" name="fechaida" oninput="validarFechas()" required onkeydown="return false">
         <label for="fechavuelta">Fecha de vuelta: </label>
-        <input type="date"> 
+        <input type="date" id="fechavuelta" min="" name="fechavuelta" oninput="validarFechas()" required onkeydown="return false"> 
 <br>    
         <label for="tipo">Indique el tipo de servicio que desea contratar</label> <br>
                     Solo pasaje <input type="radio" name="tipo" value="Solo pasaje" checked/> <br>
@@ -83,8 +89,9 @@
     <br />
 
 </fieldset>
+</div>
 
-<fieldset>
+<fieldset class="inf">
     <legend>Datos de pasajeros</legend>
     <label for="viajeros">Cantidad de viajeros: </label>
     <output name="viajeros" for="mayores menores"></output>
@@ -99,8 +106,10 @@
 <input class="sub" type="submit" value="Cargar Informacion"/>
 <input class="sub" type="reset" value="Restablecer" />
 </div>
-
+</div>
 
 </form>
+
+<script src="script.js"></script>
 </body>
 </html>

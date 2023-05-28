@@ -44,6 +44,7 @@
 <br>
 <label for="passcheck">Confirme su contraseña: </label>
 <input type="password" id="passcheck" name="passcheck" required>
+<span id="passcheck-error" style="color: red;"></span>
 </fieldset>
 </div>
 
@@ -103,8 +104,8 @@
     <input type="number"  id="menores" name="menores" required>
 </fieldset>
 <div class="flex">
-<input class="sub" type="submit" value="Cargar Informacion"/>
-<input class="sub" type="reset" value="Restablecer" />
+    <input class="sub" type="submit" id="submitBtn" value="Cargar Informacion"/>
+    <input class="sub" type="reset" value="Restablecer" />
 </div>
 </div>
 

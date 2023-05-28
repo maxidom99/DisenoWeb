@@ -27,4 +27,18 @@ function validarFechas() {
     }
   }
   
+  function validarContrasenas() {
+    var pass = document.getElementById('pass').value;
+    var passcheck = document.getElementById('passcheck').value;
+    var passcheckError = document.getElementById('passcheck-error');
+
+    if (pass !== passcheck) {
+        passcheckError.textContent = "Las contraseñas no coinciden";
+    } else {
+        passcheckError.textContent = "";
+
+    }
+}
+
+
   

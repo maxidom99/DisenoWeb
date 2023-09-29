@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style_auto.css">
+    <title>Tienda de Autos</title>
+</head>
+<body>
+    <div class="container">
+        <h1>AUTOS POR DOQUIER</h1>
+
+        <!-- Formulario para agregar autos -->
+        <form id="agregar-auto-form">
+            <input type="file" id="imagen" accept="image/*" required>
+            <input type="text" id="marca" placeholder="Marca" required>
+            <input type="text" id="modelo" placeholder="Modelo" required>
+            <input type="number" id="precio" placeholder="Precio" step="0.01" required>
+            <button type="submit">Agregar Auto</button>
+            <button id="eliminar-todo">Eliminar todo</button>
+        </form>
+
+        <!-- Área para mostrar los autos -->
+        <div id="autos-portfolio" class="autos-galeria"></div>
+    </div>
+
+    <!-- Script para cargar y mostrar imágenes -->
+    <script>
+        document.getElementById("agregar-auto-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+    
+            const inputImagen = document.getElementById("imagen");
+            const marca = document.getElementById("marca").value;
+            const modelo = document.getElementById("modelo").value;
+            const precio = parseFloat(document.getElementById("precio").value);
+
+            if (inputImagen.files && inputImagen.files[0] && marca && modelo && !isNaN(precio)) {
+                const reader = new FileReader();
+    
+                reader.onload = function (e) {
+                    const imagenDataUrl = e.target.result;
+                    agregarAutoConIVA(imagenDataUrl, marca, modelo, precio);
+                };
+    
+                reader.readAsDataURL(inputImagen.files[0]);
+    
+                // Limpiar el formulario
+                inputImagen.value = "";
+                document.getElementById("marca").value = "";
+                document.getElementById("modelo").value = "";
+                document.getElementById("precio").value = "";
+            }
+        });
+    
+        function agregarAutoConIVA(imagen, marca, modelo, precio) {
+            const ivaPorcentaje = 16; // Cambia este valor según el porcentaje de IVA que desees aplicar
+            const iva = (precio * ivaPorcentaje) / 100;
+            const precioConIVA = precio + iva;
+    
+            const autosGaleria = document.getElementById("autos-portfolio");
+            const autoDiv = document.createElement("div");
+            autoDiv.classList.add("auto-item");
+    
+            autoDiv.innerHTML = `
+                <img src="${imagen}" alt="${marca} ${modelo}">
+                <p>Marca: ${marca}</p>
+                <p>Modelo: ${modelo}</p>
+                <p>Precio: $${precio.toFixed(2)}</p>
+                <p>Total con IVA (${ivaPorcentaje}%): $${precioConIVA.toFixed(2)}</p>
+            `;
+    
+            autosGaleria.appendChild(autoDiv);
+        }
+
+        document.getElementById("eliminar-todo").addEventListener("click", function () {
+        const autosGaleria = document.getElementById("autos-portfolio");
+        autosGaleria.innerHTML = ""; // Elimina todos los elementos dentro de la galería
+     });
+    </script>
+    
+</body>
+</html>
+

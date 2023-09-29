@@ -7,7 +7,8 @@
     <title>Tienda de Autos</title>
 </head>
 <body>
-    <button><a href="../index.html">Volver al Dashboard</a></button>
+    <button class="Volver"><a href="inicio_forms.html">Volver al Dashboard</a></button>
+   
     <div class="container">
         <h1>AUTOS POR DOQUIER</h1>
 
@@ -21,7 +22,6 @@
             <button id="eliminar-todo">Eliminar todo</button>
         </form>
 
-        <!-- Área para mostrar los autos -->
         <div id="autos-portfolio" class="autos-galeria"></div>
     </div>
 
@@ -45,7 +45,6 @@
     
                 reader.readAsDataURL(inputImagen.files[0]);
     
-                // Limpiar el formulario
                 inputImagen.value = "";
                 document.getElementById("marca").value = "";
                 document.getElementById("modelo").value = "";
@@ -75,7 +74,7 @@
 
         document.getElementById("eliminar-todo").addEventListener("click", function () {
         const autosGaleria = document.getElementById("autos-portfolio");
-        autosGaleria.innerHTML = ""; // Elimina todos los elementos dentro de la galería
+        autosGaleria.innerHTML = "";
      });
     </script>
     

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="final.css">
+
+    <title>Evento Anónimo</title>
+</head>
+<body>
+    <button><a class="volver" href="../Formularios_Practicos/inicio_forms.html">Volver atrás</a></button>
+    <div class="titulo1">
+    <h1>🔍 Evento Enigma 🔎</h1>
+    </div>    
+    <div class="titulo2">
+    <h2>🃏 Responde los siguientes acertijos correctamente y recibirás una gran sorpresa 🃏</h2>
+    </div>  
+
+    <form class="form">
+        <fieldset>
+            <legend>Acertijo 1</legend>
+            <label for="question1">¿Cuál es el lenguaje base de programación utilizado para crear sitios web?</label>
+            <br>
+            <input type="text" name="lenguaje" id="lenguaje" required>
+            <br>
+            <button type="button" onclick="Respuesta1()">Enviar</button>
+        </fieldset>
+
+        <fieldset>
+            <legend>Acertijo 2</legend>
+            <label for="question2">Tipo de red informática que conecta computadoras en todo el mundo</label>
+            <br>
+            <input type="text" name="red" id="red" required>
+            <br>
+            <button type="button" onclick="Respuesta2()">Enviar</button>
+        </fieldset>
+
+        <fieldset>
+            <legend>Acertijo 3</legend>
+            <label for="question3">Nombre del software utilizado para proteger datos en un dispositivo informático</label>
+            <br>
+            <input type="text" name="software" id="software" required>
+            <br>
+            <button type="button" onclick="Respuesta3()">Enviar</button>
+        </fieldset>
+    </form>
+
+    <div class="saludo2" id="mensaje-container">
+        <h2 class="saludo">¡Bienvenido!</h2>
+        <p>A continuación verás en el mapa la dirección del evento...</p>
+        <div id="map"></div>
+        <p>El evento comienza a las 21:00 hs, el día 02/12. ¡Te esperamos!</p>
+        <p>Atentamente: Enigma Engineers</p>
+        <img src="/Formularios_Practicos/img/enigma (2).jpeg" class="logo">
+    </div>
+
+    <script src="scriptFinal.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8tll3lF6LWmjp0EdsZKSsHuwJdtZOPPo&callback=initMap"></script>
+</body>
+</html>
